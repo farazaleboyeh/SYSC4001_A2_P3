@@ -1,2 +1,8 @@
-bin
-.vscode
+bin/
+*.o
+*.obj
+.DS_Store
+
+# Optional: ignore root-level stray outputs
+/execution.txt
+/system_status.txt
