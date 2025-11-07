@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -14,3 +15,11 @@ g++ -std=c++17 -g -O0 -I . -o bin/interrupts interrupts.cpp
 # clang++ -std=c++17 -g -O0 -I . -o bin/interrupts interrupts.cpp
 
 echo "Build OK -> bin/interrupts"
+=======
+if [ ! -d "bin" ]; then
+    mkdir bin
+else
+	rm bin/*
+fi
+g++ -g -O0 -I . -o bin/interrupts interrupts_101311227_101268686.cpp
+>>>>>>> 439d74b (Add files via upload)
