@@ -4,7 +4,7 @@ set -euo pipefail
 mkdir -p bin output_files
 
 CXX="${CXX:-c++}"
-# -I . ensures local headers are found regardless of include style
+# -I . so the wrapper includes resolve
 "$CXX" -std=c++17 -O2 -Wall -Wextra -I . \
   Interrupts_101268686_101311227.cpp \
   -o bin/interrupts
