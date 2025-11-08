@@ -6,3 +6,8 @@ bin/
 # Optional: ignore root-level stray outputs
 /execution.txt
 /system_status.txt
+output_files/execution.txt
+output_files/system_status.txt
+bin/interrupts
+bin/interrupts.dSYM/
+main
