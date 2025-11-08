@@ -8,6 +8,13 @@ bin/
 /system_status.txt
 output_files/execution.txt
 output_files/system_status.txt
+<<<<<<< HEAD
 bin/interrupts
 bin/interrupts.dSYM/
 main
+=======
+output_files/execution.txt
+output_files/system_status.txt
+output_files/execution.txt
+output_files/system_status.txt
+>>>>>>> 1b08cb9 (Repo hygiene: untrack generated outputs; keep output_files/)
