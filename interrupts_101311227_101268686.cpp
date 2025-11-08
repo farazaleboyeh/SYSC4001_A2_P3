@@ -45,7 +45,7 @@ std::tuple<std::string, std::string, int> simulate_trace(std::vector<std::string
             current_time = time;
             execution += intr;
 
-            execution += std::to_string(current_time) + ", " + std::to_string(delays[duration_intr]) + ", ENDIO ISR(ADD STEPS HERE)\n";
+            execution += std::to_string(current_time) + ", " + std::to_string(delays[duration_intr]) + ", ENDIO ISR\n";
             current_time += delays[duration_intr];
 
             execution += std::to_string(current_time) + ", 1, IRET\n";
