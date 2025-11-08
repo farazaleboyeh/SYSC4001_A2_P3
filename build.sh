@@ -1,25 +1,16 @@
-<<<<<<< HEAD
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Ensure bin/ exists
-mkdir -p bin
+# fresh dirs
+mkdir -p bin output_files
 
-# Clean previous artifacts safely (macOS may create a .dSYM directory)
-rm -f bin/interrupts || true
-rm -rf bin/interrupts.dSYM || true
+# build
+CXX="${CXX:-c++}"
+"$CXX" -std=c++17 -O2 -Wall -Wextra interrupts_101311227_101268686.cpp -o bin/interrupts
 
-# Compile (g++ or clang++; both ok). Make sure the filename is correct: interrupts.cpp
-g++ -std=c++17 -g -O0 -I . -o bin/interrupts interrupts.cpp
-# If you prefer clang++, comment the line above and uncomment the next:
-# clang++ -std=c++17 -g -O0 -I . -o bin/interrupts interrupts.cpp
+# run the simulator on the main test inputs
+./bin/interrupts input_files/trace.txt vector_table.txt device_table.txt external_files.txt
 
-echo "Build OK -> bin/interrupts"
-=======
-if [ ! -d "bin" ]; then
-    mkdir bin
-else
-	rm bin/*
-fi
-g++ -g -O0 -I . -o bin/interrupts interrupts_101311227_101268686.cpp
->>>>>>> 439d74b (Add files via upload)
+# show a quick peek of outputs
+sed -n '1,200p' output_files/execution.txt
+sed -n '1,120p' output_files/system_status.txt
