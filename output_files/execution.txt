@@ -1,0 +1,23 @@
+0, 1, switch to kernel mode
+1, 10, context saved
+11, 1, find vector 2 in memory position 0x0004
+12, 1, load address 0X0695 into the PC
+13, 1, FORK: create child PID=1
+14, 1, child PID=1 allocated partition 5
+15, 1, switch to kernel mode
+16, 10, context saved
+26, 1, find vector 3 in memory position 0x0006
+27, 1, load address 0X042B into the PC
+28, 1, EXEC load image 'program1'
+29, 1, EXEC image allocated partition 4
+30, 2, CPU Burst
+32, 1, exec image freed
+33, 1, child PID=1 freed partition and exited
+34, 1, switch to kernel mode
+35, 10, context saved
+45, 1, find vector 3 in memory position 0x0006
+46, 1, load address 0X042B into the PC
+47, 1, EXEC load image 'program2'
+48, 1, EXEC image allocated partition 3
+49, 2, CPU Burst
+51, 1, exec image freed
