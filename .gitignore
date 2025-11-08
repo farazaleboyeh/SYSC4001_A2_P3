@@ -18,3 +18,13 @@ output_files/system_status.txt
 output_files/execution.txt
 output_files/system_status.txt
 >>>>>>> 1b08cb9 (Repo hygiene: untrack generated outputs; keep output_files/)
+output_files/execution.txt
+output_files/system_status.txt
+bin/interrupts
+bin/interrupts.dSYM/
+main
+output_files/execution.txt
+output_files/system_status.txt
+bin/interrupts
+bin/interrupts.dSYM/
+main
